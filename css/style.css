@@ -141,6 +141,7 @@ ul {
   width: 255px;
   height: 322px;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 
 .black {
