@@ -1,26 +1,61 @@
 body {
   background-color: black;
-  padding: 20px;
+  padding: 20px 5% 30px 5%;
 }
 
 .wrap {
-  width: 1300px;
-  height: 2000px;
   background-color: white;
   margin: 0 auto;
   box-sizing: border-box;
+  max-width: 1600px;
+  /* min-height: 4210px; */
+}
+
+.top-heaader {
+  background-color: #1abc9c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0 5% 0 5%;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+
+.top-heaader a {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(254, 254, 254);
+  font-weight: 300;
+}
+
+.top-heaader a:hover {
+  color: aquamarine;
+}
+
+.contacts {
+  text-decoration: none;
+  line-height: 2;
+}
+
+.info-list {
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+  line-height: 0;
 }
 
 header {
-  width: 1000px;
   margin: 0 auto;
-  width: 1110px;
 }
 
 .logo a {
   font-size: 30px;
   font-family: "Roboto";
-  /* color: #1abc9c; */
+
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -49,13 +84,16 @@ nav a {
 
 .flex-nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 40px 0 120px 0;
+  flex-wrap: wrap;
+  padding: 30px 50px 120px 50px;
 }
 
 .nav-list {
   margin: 0;
   display: flex;
+  list-style: none;
 }
 
 .nav-item {
@@ -74,7 +112,7 @@ nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 150px;
+  margin: 0 10% 100px 10%;
 }
 
 .h2 {
@@ -109,24 +147,12 @@ a {
   text-decoration: none;
 }
 
-li {
-  list-style: none;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
 .flexlist {
   margin: 0;
   display: flex;
+  flex-direction: row;
 
-  width: 1110px;
-  height: 680px;
-
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-evenly;
 
   flex-wrap: wrap;
 }
@@ -137,6 +163,7 @@ ul {
 }
 
 .flex-block {
+  margin: 10px;
   display: flex;
   width: 255px;
   height: 322px;
@@ -170,23 +197,25 @@ ul {
 }
 
 .second-section {
+  padding: 5% 10% 5% 10%;
+  box-sizing: border-box;
+  background-color: #e9f0fd;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .flex-block2 {
   width: 350px;
   height: 495px;
+  margin: 10px 10px 50px 10px;
 }
 
 .flex-list2 {
   display: flex;
-
-  width: 1110px;
-
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .flex-block2 a {
