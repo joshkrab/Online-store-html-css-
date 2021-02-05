@@ -8,7 +8,6 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   max-width: 1600px;
-  /* min-height: 4210px; */
 }
 
 .top-heaader {
@@ -26,7 +25,7 @@ body {
 .top-heaader a {
   color: #ffffff;
   font-size: 14px;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   color: rgb(254, 254, 254);
   font-weight: 300;
 }
@@ -54,7 +53,7 @@ header {
 
 .logo a {
   font-size: 30px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 
   text-transform: uppercase;
   font-weight: 400;
@@ -62,7 +61,7 @@ header {
 
 .green-logo {
   font-size: 30px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   color: #1abc9c;
   text-transform: uppercase;
   line-height: 1.067;
@@ -76,7 +75,7 @@ header {
 nav a {
   color: black;
   font-size: 14px;
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   text-transform: uppercase;
   line-height: 0.786;
   font-weight: bold;
@@ -87,7 +86,7 @@ nav a {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 30px 50px 120px 50px;
+  padding: 30px 50px 3% 50px;
 }
 
 .nav-list {
@@ -123,7 +122,7 @@ nav a {
   text-transform: uppercase;
   text-align: center;
   line-height: 0.667;
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
 h2 {
@@ -140,7 +139,7 @@ h2 {
 header,
 .first-section {
   text-transform: uppercase;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -151,9 +150,7 @@ a {
   margin: 0;
   display: flex;
   flex-direction: row;
-
   justify-content: space-evenly;
-
   flex-wrap: wrap;
 }
 
@@ -178,7 +175,7 @@ a {
   background-color: #323232;
   box-sizing: border-box;
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   padding: 11px 0 8px 13px;
 }
 
@@ -189,11 +186,8 @@ a {
   width: 55px;
   height: 40px;
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   text-align: center;
-  /*  Два способа выравнивания по вертикали: */
-  /* padding: 10px; */
-  line-height: 40px;
 }
 
 .second-section {
@@ -225,7 +219,7 @@ a {
   border-radius: 3px;
   background-color: rgb(78, 198, 171);
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: rgb(255, 255, 255);
   text-align: center;
   line-height: 50px;
@@ -237,7 +231,7 @@ a {
 
 .flex-block2 p {
   font-size: 14px;
-  font-family: "OpenSans";
+  font-family: 'OpenSans';
   color: rgb(85, 82, 82);
   line-height: 1.857;
   margin: 30px 0 20px 0;
@@ -245,7 +239,7 @@ a {
 
 h3 {
   font-size: 18px;
-  font-family: "OpenSans";
+  font-family: 'OpenSans';
   color: rgb(85, 82, 82);
   line-height: 1.444;
   margin: 15px 0 15px 0;
