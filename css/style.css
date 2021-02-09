@@ -53,7 +53,7 @@ header {
 
 .logo a {
   font-size: 30px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
 
   text-transform: uppercase;
   font-weight: 400;
@@ -61,7 +61,7 @@ header {
 
 .green-logo {
   font-size: 30px;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   color: #1abc9c;
   text-transform: uppercase;
   line-height: 1.067;
@@ -85,12 +85,14 @@ nav a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  padding: 30px 50px 3% 50px;
+  padding: 2% 50px 2% 50px;
 }
 
 .nav-list {
   margin: 0;
+  padding: 0;
   display: flex;
   list-style: none;
 }
@@ -98,6 +100,163 @@ nav a {
 .nav-item {
   margin-left: 30px;
 }
+
+/* Head Section */
+
+.head-position {
+  position: relative;
+  text-align: center;
+}
+
+.head-section {
+  background-color: grey;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.head-section:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to left, #000000, #000000);
+  opacity: 0.4;
+}
+
+.head-section:hover:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to left, #11de93, #0e7ad6);
+  opacity: 0.4;
+}
+
+.head-content a:hover {
+  background-color: #15856e;
+}
+
+.head-img {
+  display: block;
+  width: 100%;
+}
+
+.head-content {
+  position: absolute;
+
+  /* Центрирование: */
+  top: 50%;
+  left: 50%;
+  /* translate(x,y) */
+  /* Сдвигает элемент на новое место, перемещая относительно 
+  обычного положения вправо и вниз, используя координаты X и Y, 
+  не затрагивая при этом соседние элементы. 
+  Если нужно сдвинуть элемент влево или вверх, то нужно 
+  использовать отрицательные значения. */
+  transform: translate(-50%, -50%);
+  /* width: 50%; */
+
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-content h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.head-content p {
+  margin: 0 0 3% 0;
+  padding: 0;
+}
+
+.head-content a {
+  display: block;
+  width: 160px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #1abc9c;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 50px;
+}
+
+.head-green {
+  font-weight: 600;
+  color: #1abc9c;
+}
+
+/* Icon section */
+
+.big-icon {
+  font-size: 70px;
+  color: rgb(26, 188, 156);
+  line-height: 0.457;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-section h3 {
+  font-size: 18px;
+  font-family: 'Open Sans';
+  color: rgb(85, 82, 82);
+  font-weight: bold;
+  line-height: 1.778;
+  text-align: center;
+}
+
+.icon-p {
+  font-size: 14px;
+  font-family: 'Open Sans';
+  color: rgb(85, 82, 82);
+  line-height: 1.714;
+  /* текст по ширине */
+  text-align: justify;
+}
+
+.icon-block {
+  width: 255px;
+  text-align: center;
+  margin: 10px;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 10% 5% 10%;
+}
+
+/* New-collection */
+.new-collection {
+  padding: 5% 10% 5% 10%;
+  box-sizing: border-box;
+  background-color: #e9f0fd;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+/* Fitrst section */
 
 .flex-block:hover .black {
   background-color: #1abc9c;
@@ -126,7 +285,7 @@ nav a {
 }
 
 h2 {
-  margin: 0 0 30px 0;
+  margin: 0 0 5% 0;
 }
 
 .green {
@@ -134,6 +293,7 @@ h2 {
   width: 164px;
   height: 7px;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 header,
@@ -156,14 +316,13 @@ a {
 
 .flexlist img {
   width: 255px;
-  height: 282px;
+  height: fit-content;
 }
 
 .flex-block {
   margin: 10px;
   display: flex;
   width: 255px;
-  height: 322px;
   flex-wrap: wrap;
   cursor: pointer;
 }
@@ -172,16 +331,20 @@ a {
   width: 200px;
   height: 40px;
   color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
   background-color: #323232;
   box-sizing: border-box;
   font-size: 18px;
   font-family: 'Roboto';
-  padding: 11px 0 8px 13px;
+  /* padding: 11px 0 8px 13px; */
 }
 
 .grey {
   background-color: #8c8c8c;
   color: #ffffff;
+  line-height: 40px;
   box-sizing: border-box;
   width: 55px;
   height: 40px;
@@ -190,13 +353,14 @@ a {
   text-align: center;
 }
 
+/* Second section */
+
 .second-section {
   padding: 5% 10% 5% 10%;
   box-sizing: border-box;
   background-color: #e9f0fd;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .flex-block2 {
@@ -256,4 +420,77 @@ h3 {
   padding: 0;
   width: 350px;
   height: 260px;
+}
+
+/* Footer */
+
+.footer {
+  background-image: url(../img/Footer_back.png);
+  background-size: cover;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.footer p {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  line-height: 1.625;
+  margin: 0 0 2% 0;
+}
+
+.footer h2 {
+  padding: 5% 0 2% 0;
+  margin: 0;
+}
+
+.input {
+  width: 540px; /* Ширина поля с кнопкой */
+  border: 3px solid #ffffff; /* Параметры рамки */
+  border-radius: 5px;
+  min-height: 65px; /* Минимальная высота */
+  margin: 2% auto 5% auto;
+  background-color: #ffffff;
+}
+
+.input:hover {
+  border: 3px solid #e7c0c0;
+}
+
+.input-email {
+  border: none; /* Убираем рамку */
+  outline: none; /* Убираем свечение в Chrome и Safari */
+  -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+  width: 440px; /* Ширина поля */
+  height: 65px;
+  margin: 0;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  font-size: 24px;
+}
+
+.input-button {
+  width: 86px; /* Ширина кнопки */
+  height: 65px; /* Высота кнопки */
+  border: none; /* Убираем рамку */
+  margin: 0;
+  padding: 0 0 0 3px;
+  text-align: center;
+  font-size: 55px;
+  color: rgb(255, 255, 255);
+  line-height: 0;
+  cursor: pointer;
+  background-color: #4ec6ab;
+  border-radius: 0 5px 5px 0;
+}
+
+.input-button:hover {
+  background-color: #358d7a;
+}
+
+.input-span {
+  line-height: 65px;
 }
