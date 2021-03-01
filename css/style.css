@@ -171,7 +171,7 @@ nav a {
   align-items: center;
 }
 
-.head-content h2 {
+.head-content h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 48px;
   font-weight: 300;
@@ -258,12 +258,36 @@ nav a {
 
 /* Fitrst section */
 
+.flex-block {
+  margin: 10px;
+  display: flex;
+  width: 255px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  position: relative;
+}
+
 .flex-block:hover .black {
   background-color: #1abc9c;
 }
 
 .flex-block:hover .grey {
   background-color: #7fd9c7;
+}
+
+.flex-block:hover::after {
+  content: '';
+  width: 255px;
+  height: 280px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to left, #000000, #000000);
+  opacity: 0.54;
+  /* Делаем рамку внутри блока */
+  outline: 10px solid #ffffff;
+  outline-offset: -10px;
 }
 
 .first-section {
@@ -285,15 +309,14 @@ nav a {
 }
 
 h2 {
-  margin: 0 0 5% 0;
+  margin: 0 0 40px 0;
 }
 
-.green {
-  background-color: rgb(26, 188, 156);
-  width: 164px;
-  height: 7px;
-  margin-bottom: 60px;
+h2::after {
+  content: url(../img/Green-line1.png);
+  display: block;
   text-align: center;
+  margin: 10px auto;
 }
 
 header,
@@ -316,15 +339,7 @@ a {
 
 .flexlist img {
   width: 255px;
-  height: fit-content;
-}
-
-.flex-block {
-  margin: 10px;
-  display: flex;
-  width: 255px;
-  flex-wrap: wrap;
-  cursor: pointer;
+  height: 280px;
 }
 
 .black {
@@ -363,6 +378,11 @@ a {
   flex-direction: column;
 }
 
+.second-section h3::after {
+  content: url(../img/Green_line2.png);
+  display: block;
+}
+
 .flex-block2 {
   width: 350px;
   height: 495px;
@@ -398,7 +418,7 @@ a {
   font-family: 'OpenSans';
   color: rgb(85, 82, 82);
   line-height: 1.857;
-  margin: 30px 0 20px 0;
+  margin: 10px 0 10px 0;
 }
 
 h3 {
@@ -407,12 +427,6 @@ h3 {
   color: rgb(85, 82, 82);
   line-height: 1.444;
   margin: 15px 0 15px 0;
-}
-
-.green2 {
-  background-color: rgb(78, 198, 171);
-  width: 136px;
-  height: 3px;
 }
 
 .flex-list2 img {
@@ -445,6 +459,13 @@ h3 {
 .footer h2 {
   padding: 5% 0 2% 0;
   margin: 0;
+}
+
+.footer h2::after {
+  content: url(../img/White-line.png);
+  display: block;
+  text-align: center;
+  margin: 1% auto;
 }
 
 .input {
