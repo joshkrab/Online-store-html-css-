@@ -265,29 +265,101 @@ nav a {
   flex-wrap: wrap;
   cursor: pointer;
   position: relative;
+  /* Скрываем все, что вокруг */
+  overflow: hidden;
+}
+
+/* Блок подписи карточек */
+
+.black {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 40px;
+  background-color: #323232;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Roboto';
+  /* padding: 11px 0 8px 13px; */
+}
+
+.grey {
+  position: relative;
+  background-color: #8c8c8c;
+  color: #ffffff;
+  line-height: 40px;
+  box-sizing: border-box;
+  width: 55px;
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Roboto';
+  text-align: center;
 }
 
 .flex-block:hover .black {
-  background-color: #1abc9c;
+  animation-name: black-green;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes black-green {
+  from {
+  }
+
+  to {
+    background-color: #1abc9c;
+  }
 }
 
 .flex-block:hover .grey {
-  background-color: #7fd9c7;
+  animation-name: grey-green;
+  animation-duration: 250ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: forwards;
 }
 
-.flex-block:hover::after {
-  content: '';
+@keyframes grey-green {
+  from {
+  }
+
+  to {
+    background-color: #7fd9c7;
+  }
+}
+
+.block-gradient {
   width: 255px;
   height: 280px;
 
   position: absolute;
-  top: 0;
-  left: 0;
+  transform: translate(0, 280px);
   background-image: linear-gradient(to left, #000000, #000000);
   opacity: 0.54;
   /* Делаем рамку внутри блока */
   outline: 10px solid #ffffff;
   outline-offset: -10px;
+}
+
+/* При наведении на блок меняем блок градиента */
+.flex-block:hover > .block-gradient {
+  animation-name: Grad-anim;
+  animation-duration: 250ms;
+  /* Чтобы анимация не сбрасывалась сама */
+  animation-fill-mode: forwards;
+}
+
+/* Описываем анимацию */
+@keyframes Grad-anim {
+  from {
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
 }
 
 .first-section {
@@ -342,30 +414,84 @@ a {
   height: 280px;
 }
 
-.black {
-  width: 200px;
-  height: 40px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 40px;
-  background-color: #323232;
+/* Блок кнопок карточки */
+
+.button-block {
+  width: 255px;
+  height: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: 0;
+  padding: 86px 44px 87px 45px;
   box-sizing: border-box;
-  font-size: 18px;
-  font-family: 'Roboto';
-  /* padding: 11px 0 8px 13px; */
+  position: absolute;
+  /* Перемещает блок по горизонтали и вертикали: */
+  transform: translate(0, 0);
+  opacity: 0;
 }
 
-.grey {
-  background-color: #8c8c8c;
-  color: #ffffff;
-  line-height: 40px;
-  box-sizing: border-box;
-  width: 55px;
-  height: 40px;
-  font-size: 18px;
-  font-family: 'Roboto';
-  text-align: center;
+/* При наведении на блок меняем блок кнопок */
+.flex-block:hover > .button-block {
+  /* Создаем анимацию */
+  animation-name: Button-block-anim;
+  /* Задержка старта анимации */
+  animation-delay: 250ms;
+  /* Продолжительность анимации */
+  animation-duration: 250ms;
+  /* Чтобы анимация не сбрасывалась сама */
+  animation-fill-mode: forwards;
+}
+
+/* Описываем анимацию */
+@keyframes Button-block-anim {
+  from {
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.button_block_1 {
+  background-image: url(../img/Card_button_01.png);
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button_block_2 {
+  background-image: url(../img/Card_button_02.png);
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button_block_3 {
+  background-image: url(../img/Card_button_03.png);
+  width: 50px;
+  height: 50px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.button_block_4 {
+  background-image: url(../img/Card_button_04.png);
+  width: 167px;
+  height: 50px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 /* Second section */
