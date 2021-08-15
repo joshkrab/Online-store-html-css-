@@ -1,2 +1,1 @@
-# markup-hw-05
-Homework-05
+Exploring properties in pure HTML/CSS
